@@ -43,13 +43,14 @@ __Vamos fazer a seguinte chamada para obter as dívidas associadas ao CPF passad
 curl -X GET [https://seuwebservice.com.br/dividas]<b>[CPF=666777888999&NR_TOKEN=kCMN7jvUvUx5eb]</b>
 
 /*Os seguintes parâmetros serão passados na chamada*/
-| Nome do parâmetros |   Tipo        |  Descrição                                     
-|--------------------|---------------------------------------------------------------
+| Nome do parâmetros |     Tipo      |  Descrição                                     
+|--------------------|-----------------------------------------------------------------------------------
 |       CPF          |    string     |  CPF informado pelo usuário do PagoSim.        
-|--------------------|---------------------------------------------------------------
+|--------------------|-----------------------------------------------------------------------------------
 |                    |               |  Nome do parâmetro que capturamos na autenticação e vamos enviar 
 |    NR_TOKEN        |    string     |  para que o seu servidor reconheça, através do valor do parâmetro, 
-|                    |               |  a nossa conexão. -------------------------------------------------------------------------------------
+|                    |               |  a nossa conexão. 
+---------------------------------------------------------------------------------------------------------
 </pre>
 
 *Abaixo estão listados os códigos HTTP de retorno que iremos tratar.*
@@ -93,12 +94,12 @@ __Vamos fazer a seguinte chamada para informar que um acordo foi fechado com o c
 curl -X POST -d "<b>NR_TOKEN=kCMN7jvUvUx5eb&debitId=1234566767&numberOfInstallments=3</b>" [https://seuwebservice.com.br/acordo]
 
 /*Os seguintes parâmetros serão passados na chamada*/
-| Nome do parâmetros   |     Tipo   |    Descrição                                     
-|----------------------|---------------------------------------------------------------
+| Nome do parâmetros   |    Tipo    |    Descrição                                     
+|----------------------|------------------------------------------------------------------------------------
 |      debitId         |   string   |    Identificador da dívida fornecida por vocês.        
-|----------------------|---------------------------------------------------------------
+|----------------------|------------------------------------------------------------------------------------
 | numberOfInstallments |   integer  |    Quantidade de parcelas escolhidas para fechar o acordo.        
-|--------------------  |---------------------------------------------------------------
+|----------------------|------------------------------------------------------------------------------------
 |                      |            |     Todos os dados para contato informado pelo usuário serão enviados
 |                      |            |     parâmetro. Abaixo um exemplo de preenchimento deste parâmetro.
 |                      |            |      
@@ -110,10 +111,11 @@ curl -X POST -d "<b>NR_TOKEN=kCMN7jvUvUx5eb&debitId=1234566767&numberOfInstallme
 |                      |            |                        city:'Sao Paulo',
 |                      |            |                        state:'SP' }
 |                      |            |                        }
-|-------------------------------------------------------------------------------------
+|----------------------|------------------------------------------------------------------------------------
 |                      |            |     Nome do parâmetro que capturamos na autenticação e vamos enviar 
 |    NR_TOKEN          |    string  |     para que o seu servidor reconheça, através do valor do parâmetro, 
-|                      |            |     a nossa conexão. -------------------------------------------------------------------------------------
+|                      |            |     a nossa conexão.
+|----------------------|------------------------------------------------------------------------------------
 
 
 </pre>
