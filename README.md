@@ -68,7 +68,7 @@ curl -X GET [https://seuwebservice.com.br/dividas]<b>[CPF=666777888999&NR_TOKEN=
     "name": "Darth Vader",
     "birthDate": "25051977",
     "maritalStatus": "divorciado",
-    "sex": "masculino",
+    "gender": "masculino",
     "debts": [
         {
             "id": "1234566767",
