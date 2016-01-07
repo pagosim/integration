@@ -42,7 +42,8 @@ __Vamos fazer a seguinte chamada para obter as dívidas associadas ao CPF passad
 <pre>
 curl -X GET [https://seuwebservice.com.br/dividas]<b>[CPF=666777888999&NR_TOKEN=kCMN7jvUvUx5eb]</b>
 
-/*Os seguintes parâmetros serão passados na chamada*/
+<b>/*Os seguintes parâmetros serão passados na chamada*/</b>
+---------------------------------------------------------------------------------------------------------
 | Nome do parâmetros |     Tipo      |  Descrição                                     
 |--------------------|-----------------------------------------------------------------------------------
 |       CPF          |    string     |  CPF informado pelo usuário do PagoSim.        
@@ -93,8 +94,8 @@ __Vamos fazer a seguinte chamada para informar que um acordo foi fechado com o c
 <pre>
 curl -X POST -d "<b>NR_TOKEN=kCMN7jvUvUx5eb&debitId=1234566767&numberOfInstallments=3</b>" [https://seuwebservice.com.br/acordo]
 
-/*Os seguintes parâmetros serão passados na chamada*/
-
+<b>/*Os seguintes parâmetros serão passados na chamada*/</b>
+------------------------------------------------------------------------------------------------------------
 | Nome do parâmetros   |    Tipo    |    Descrição                                     
 |----------------------|------------------------------------------------------------------------------------
 |      debitId         |   string   |    Identificador da dívida fornecida por vocês.        
