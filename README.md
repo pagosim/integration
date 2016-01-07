@@ -104,7 +104,7 @@ curl -X POST -d "<b>NR_TOKEN=kCMN7jvUvUx5eb&debitId=1234566767&numberOfInstallme
 |                      |            |      
 |                      |            |     user: { email:'darthvader@starwars.com',
 |                      |            |             address: { zipCode:66666090,
-|           user       |    json    |                        street:'av paulista', 
+|       user           |    json    |                        street:'av paulista', 
 |                      |    object  |                        number:1877, 
 |                      |            |                        additionalInfo:'ap 67',
 |                      |            |                        city:'Sao Paulo',
