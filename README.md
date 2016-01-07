@@ -94,6 +94,7 @@ __Vamos fazer a seguinte chamada para informar que um acordo foi fechado com o c
 curl -X POST -d "<b>NR_TOKEN=kCMN7jvUvUx5eb&debitId=1234566767&numberOfInstallments=3</b>" [https://seuwebservice.com.br/acordo]
 
 /*Os seguintes parâmetros serão passados na chamada*/
+
 | Nome do parâmetros   |    Tipo    |    Descrição                                     
 |----------------------|------------------------------------------------------------------------------------
 |      debitId         |   string   |    Identificador da dívida fornecida por vocês.        
@@ -115,7 +116,7 @@ curl -X POST -d "<b>NR_TOKEN=kCMN7jvUvUx5eb&debitId=1234566767&numberOfInstallme
 |                      |            |     Nome do parâmetro que capturamos na autenticação e vamos enviar 
 |    NR_TOKEN          |    string  |     para que o seu servidor reconheça, através do valor do parâmetro, 
 |                      |            |     a nossa conexão.
-|----------------------|------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 
 
 </pre>
