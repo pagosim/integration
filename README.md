@@ -1,6 +1,6 @@
 PagoSim<br>Auto atendimento para o setor de cobrança
 ====
-Somos um clube de benefícios para pessoas interessadas em negociar suas dívidas. Nós criamos um [canal de comunicação](http://www.slideshare.net/pagosim/apresentao-comercial-pagosim) que liga devedores e credores. Para os devedores, fornecemos um canal mobile e à medida em que eles negociam com seus credores, distribuímos gratuitamente pontos que podem ser trocados por produto/serviços. Para as empresas, a plataforma é Plug&Play e permite enviar propostas ilimitadas. 
+Somos um clube de benefícios para pessoas interessadas em negociar suas dívidas. Nós criamos um [canal de comunicação](http://www.slideshare.net/pagosim/apresentao-comercial-pagosim) que liga devedores e credores. 
 
 
 Informações gerais
