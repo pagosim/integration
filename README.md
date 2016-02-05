@@ -74,6 +74,9 @@ curl -X GET [https://seuwebservice.com.br/dividas]<b>[CPF=666777888999&NR_TOKEN=
             "id": "1234566767",
             "tax": 11.4,
             "currentValue": 1000.82,
+            "companyName": 'NASA',
+            "contactPhone": '08005566778',
+            "contactEmail": 'sac@nasa.com',
             "delayDate": "31/10/1977",
             "proposals": [
                 {
