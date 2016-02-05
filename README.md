@@ -109,6 +109,7 @@ curl -X POST -d "<b>NR_TOKEN=kCMN7jvUvUx5eb&debitId=1234566767&numberOfInstallme
 |                      |            |     parâmetro. Abaixo um exemplo de preenchimento deste parâmetro.
 |                      |            |      
 |                      |            |     user: { email:'darthvader@starwars.com',
+|                      |            |             phone:'+5511988776644',
 |                      |            |             address: { zipCode:66666090,
 |       user           |    json    |                        street:'av paulista', 
 |                      |    object  |                        number:1877, 
