@@ -123,6 +123,7 @@ curl -X POST -d "<b>NR_TOKEN=kCMN7jvUvUx5eb&debitId=1234566767&numberOfInstallme
 |                      |            |     a nossa conexão.
 ------------------------------------------------------------------------------------------------------------
 
+<b>/*É recomendado que você faça o envio do boleto para o cliente após o recebimento desta chamada*/</b>
 
 </pre>
 
@@ -137,8 +138,8 @@ curl -X POST -d "<b>NR_TOKEN=kCMN7jvUvUx5eb&debitId=1234566767&numberOfInstallme
 <pre>
 <b>Exemplo de resposta que esperamos receber (quando o código HTTP for igual a 200)</b>
 {
-    "dealId": "4564545645",
-    "dueDate": "30102016"
+    "dealId": "4564545645",  -- seu código de identificação do acordo
+    "dueDate": "30102016" -- data (DD/MM/AAAA) de vencimento do primeiro boleto
 }
 </pre>
 
