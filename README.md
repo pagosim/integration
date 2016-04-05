@@ -1,22 +1,22 @@
-PagoSim<br>Auto atendimento para o setor de cobrança
+PagoSim<br>Geração de leads para crédito e cobrança
 ====
-Somos um clube de benefícios para pessoas interessadas em negociar suas dívidas. Nós criamos um [canal de comunicação](http://www.slideshare.net/pagosim/apresentao-comercial-pagosim) que liga devedores e credores. 
-
+Somos uma consultoria financeira gratuita para as pessoas e que tem como modelo de negócio a geração de leads qualificados para os setores de crédito e cobrança.
 
 Informações gerais
 ===
 
-* A comunicação feita entre os nossos servidores precisa ser feita sobre um protocolo de comunicação criptografado (HTTPS).
+* A comunicação feita entre os nossos servidores precisa ser sobre um protocolo de comunicação criptografado (HTTPS).
+* Nós precisamos dos IPs que irão acessar os nossos servidores.
 * Todos os dados trafegádos deverão estar, obrigatoriamente, no formato [JSON](http://www.json.org/).
 
 
-Autenticando nossa plataforma no seu sistema
+Verificando leads para crédito
 ====
 
-Vamos chamar o seu serviço de autorização para obter o nome e o valor do pârametro que devemos utilizar para chamar os outros serviços:
+Acesse o seguinte serviço para verificar se um CPF é um lead para crédito
 
 <pre>
-curl -X GET -d [https://seuwebservice.com.br/autenticacao]<b>[Nossas credenciais]</b>
+curl -X GET -d [https://api.pagosim.com.br/v1/payers/document/cpf-do-lead]
 </pre>
 
 *Abaixo estão listados os códigos HTTP de retorno que iremos tratar.*
@@ -24,124 +24,50 @@ curl -X GET -d [https://seuwebservice.com.br/autenticacao]<b>[Nossas credenciais
 | HTTP code |                   Descrição                                   |
 |-----------|---------------------------------------------------------------|
 | 403       |                   Acesso negado.                              |
-| 200       |                   Acesso concedido.                           |
+| 404       |                   Lead não encontrado.                        |
+| 200       |                   Lead encontrado.                            |
 
 <pre>
-<b>Exemplo de resposta que esperamos receber (quando o código HTTP for igual a 200)</b>
+<b>Conteúdo da resposta que devolvemos na requisição (quando o código HTTP de resposta for 200)</b>
 {
-    "tokenName": "NR_TOKEN",
-    "tokenValue": "kCMN7jvUvUx5eb"
+    "utm_uiid": "número de identificação interno - o mesmo código que iremos mandar para você na URL",
+    "name": "Nome da pessoa",
+    "document":"CPF da pessoa,
+    "mail":"e-mail confirmado da pessoa",
+    "phone":"telefone celular confirmado da pessoa - +5511977668899",
+    "mother":"Nome da mãe da pessoa",
+    "birthday":"data de nascimento da pessoa - dd/MM/yyyy"
 }
 </pre>
 
-Dívidas e Acordos
+Verificando leads para cobrança
 ====
 
-__Vamos fazer a seguinte chamada para obter as dívidas associadas ao CPF passado como parâmetro__<br/>
-<pre>
-curl -X GET [https://seuwebservice.com.br/dividas]<b>[CPF=666777888999&NR_TOKEN=kCMN7jvUvUx5eb]</b>
+Acesse o seguinte serviço para verificar se um CPF é um lead para cobrança
 
-<b>/*Os seguintes parâmetros serão passados na chamada*/</b>
----------------------------------------------------------------------------------------------------------
-| Nome do parâmetros |     Tipo      |  Descrição                                     
-|--------------------|-----------------------------------------------------------------------------------
-|       CPF          |    string     |  CPF informado pelo usuário do PagoSim.        
-|--------------------|-----------------------------------------------------------------------------------
-|                    |               |  Nome do parâmetro que capturamos na autenticação e vamos enviar 
-|    NR_TOKEN        |    string     |  para que o seu servidor reconheça, através do valor do parâmetro, 
-|                    |               |  a nossa conexão. 
----------------------------------------------------------------------------------------------------------
+<pre>
+curl -X GET -d [https://api.pagosim.com.br/v1/debtors/document/cpf-do-lead]
 </pre>
 
 *Abaixo estão listados os códigos HTTP de retorno que iremos tratar.*
 
-| HTTP code |                 Descrição                                     |
+| HTTP code |                   Descrição                                   |
 |-----------|---------------------------------------------------------------|
-| 403       |                 Cliente não pode negociar através do PagoSim. |
-| 404       |                 Cliente não encontrado.                       |
-| 200       |                 Dividas encontradas.                          |
+| 403       |                   Acesso negado.                              |
+| 404       |                   Lead não encontrado.                        |
+| 200       |                   Lead encontrado.                            |
 
 <pre>
-<b>Exemplo de resposta que esperamos receber (quando o código HTTP for igual a 200)</b>
+<b>Conteúdo da resposta que devolvemos na requisição (quando o código HTTP de resposta for 200)</b>
 {
-    "document": "6666667778889",
-    "name": "Darth Vader",
-    "birthDate": "25051977",
-    "maritalStatus": "divorciado",
-    "gender": "masculino",
-    "debts": [
-        {
-            "id": "1234566767",
-            "tax": 11.4,
-            "currentValue": 1000.82,
-            "companyName": 'NASA',
-            "contactPhone": '08005566778',
-            "contactEmail": 'sac@nasa.com',
-            "delayDate": "31/10/1977",
-            "proposals": [
-                {
-                    "numberOfInstallments": 1,
-                    "value": 200.16
-                },
-                {
-                    "numberOfInstallments": 3,
-                    "value": 133.44
-                }
-            ]
-        }
-    ]
+    "utm_uiid": "número de identificação interno - o mesmo código que iremos mandar para você na URL",
+    "name": "Nome da pessoa",
+    "document":"CPF da pessoa,
+    "mail":"e-mail confirmado da pessoa",
+    "phone":"telefone celular confirmado da pessoa - +5511977668899",
+    "mother":"Nome da mãe da pessoa",
+    "birthday":"data de nascimento da pessoa - dd/MM/yyyy"
 }
 </pre>
 
-__Vamos fazer a seguinte chamada para informar que um acordo foi fechado com o cliente__<br/>
-<pre>
-curl -X POST -d "<b>NR_TOKEN=kCMN7jvUvUx5eb&debitId=1234566767&numberOfInstallments=3&user=[object]</b>" [https://seuwebservice.com.br/acordo]
-
-<b>/*Os seguintes parâmetros serão passados na chamada*/</b>
-------------------------------------------------------------------------------------------------------------
-| Nome do parâmetros   |    Tipo    |    Descrição                                     
-|----------------------|------------------------------------------------------------------------------------
-|      debitId         |   string   |    Identificador da dívida fornecida por vocês.        
-|----------------------|------------------------------------------------------------------------------------
-| numberOfInstallments |   integer  |    Quantidade de parcelas escolhidas para fechar o acordo.        
-|----------------------|------------------------------------------------------------------------------------
-|                      |            |     Todos os dados para contato informado pelo usuário serão enviados
-|                      |            |     parâmetro. Abaixo um exemplo de preenchimento deste parâmetro.
-|                      |            |      
-|                      |            |     user: { email:'darthvader@starwars.com',
-|                      |            |             phone:'+5511988776644',
-|                      |            |             address: { zipCode:66666090,
-|       user           |    json    |                        street:'av paulista', 
-|                      |    object  |                        number:1877, 
-|                      |            |                        additionalInfo:'ap 67',
-|                      |            |                        city:'Sao Paulo',
-|                      |            |                        state:'SP' }
-|                      |            |                        }
-|----------------------|------------------------------------------------------------------------------------
-|                      |            |     Nome do parâmetro que capturamos na autenticação e vamos enviar 
-|    NR_TOKEN          |    string  |     para que o seu servidor reconheça, através do valor do parâmetro, 
-|                      |            |     a nossa conexão.
-------------------------------------------------------------------------------------------------------------
-
-<b>/*É recomendado que você faça o envio do boleto para o cliente após o recebimento desta chamada*/</b>
-
-</pre>
-
-*Abaixo estão listados os códigos HTTP de retorno que iremos tratar.*
-
-| HTTP code |                 Descrição                                     |
-|-----------|---------------------------------------------------------------|
-| 403       |                 Número de parcelas do acordo não é permitida. |
-| 404       |                 Cliente não encontrado.                       |
-| 200       |                 Acordo fechado com sucesso.                   |
-
-<pre>
-<b>Exemplo de resposta que esperamos receber (quando o código HTTP for igual a 200)</b>
-{
-    "dealId": "4564545645",  -- seu código de identificação do acordo
-    "dueDate": "30102016" -- data (DD/MM/AAAA) de vencimento do primeiro boleto
-}
-</pre>
-
-Qualquer dúvida entre em [contato](mailto:devops@pagosim.com.br) com a gente ;) 
-
+Qualquer dúvida entre em [contato](mailto:devops@pagosim.com.br) com a gente ;)
