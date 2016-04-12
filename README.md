@@ -55,8 +55,7 @@ curl -X GET -d [https://api.pagosim.com.br/v2/prospects/codigo-utm_uuid_que-voce
 </pre>
 
 <pre>
-Exemplo de UTM_UUID para testes: 254faa4b-6f9f-4230-b8c0-5aef2ba2b328
-[https://api.pagosim.com.br/v2/prospects/254faa4b-6f9f-4230-b8c0-5aef2ba2b328]
+Exemplo de UTM_UUID para testes: [254faa4b-6f9f-4230-b8c0-5aef2ba2b328](https://api.pagosim.com.br/v2/prospects/254faa4b-6f9f-4230-b8c0-5aef2ba2b328)
 </pre>
 
 Verificando leads para cobrança
