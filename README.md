@@ -15,10 +15,10 @@ Verificando leads para crédito
 Acesse o seguinte serviço para obter os dados de um lead para crédito
 
 <pre>
-curl -X GET -d [https://api.pagosim.com.br/v1/payers/codigo-que-voce-recebeu-na-url]
+curl -X GET -d [https://api.pagosim.com.br/v2/prospects/codigo-utm_uuid_que-voce-recebeu-na-url]
 </pre>
 
-*Abaixo estão listados os códigos HTTP de retorno que iremos tratar.*
+*Códigos HTTP de retorno*
 
 | HTTP code |                   Descrição                                   |
 |-----------|---------------------------------------------------------------|
@@ -27,7 +27,7 @@ curl -X GET -d [https://api.pagosim.com.br/v1/payers/codigo-que-voce-recebeu-na-
 | 200       |                   Lead encontrado.                            |
 
 <pre>
-<b>Conteúdo da resposta que devolvemos na requisição (quando o código HTTP de resposta for 200)</b>
+<b>Conteúdo da resposta que devolvemos na requisição (quando o código HTTP for 200)</b>
 {
     {
         "personalInfo":
@@ -52,6 +52,11 @@ curl -X GET -d [https://api.pagosim.com.br/v1/payers/codigo-que-voce-recebeu-na-
             }
     }
 }
+</pre>
+
+<pre>
+Exemplo de UTM_UUID para testes: 254faa4b-6f9f-4230-b8c0-5aef2ba2b328
+[https://api.pagosim.com.br/v2/prospects/254faa4b-6f9f-4230-b8c0-5aef2ba2b328]
 </pre>
 
 Verificando leads para cobrança
