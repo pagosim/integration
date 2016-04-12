@@ -6,7 +6,6 @@ Informações gerais
 ===
 
 * A comunicação feita entre os nossos servidores precisa ser sobre um protocolo de comunicação criptografado (HTTPS).
-* Nós precisamos dos IPs que irão acessar os nossos servidores.
 * Todos os dados trafegádos deverão estar, obrigatoriamente, no formato [JSON](http://www.json.org/).
 
 
