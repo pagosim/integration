@@ -5,8 +5,8 @@ Somos uma consultoria financeira gratuita para as pessoas e que tem como modelo 
 Informações gerais
 ===
 
-* A comunicação feita entre os nossos servidores precisa ser sobre um protocolo de comunicação criptografado (HTTPS).
-* Todos os dados trafegádos deverão estar, obrigatoriamente, no formato [JSON](http://www.json.org/).
+* A comunicação feita sobre um protocolo de comunicação criptografado (HTTPS).
+* Todos os dados trafegádos estarão no formato [JSON](http://www.json.org/).
 
 
 Verificando leads para crédito
