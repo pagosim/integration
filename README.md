@@ -15,7 +15,7 @@ Verificando leads para crédito
 Acesse o seguinte serviço para obter os dados de um lead para crédito
 
 <pre>
-curl -X GET -d [https://api.pagosim.com.br/v2/prospects/codigo-utm_uuid_que-voce-recebeu-na-url]
+curl -X GET -d https://api.pagosim.com.br/v2/prospects/codigo-utm_uuid_que-voce-recebeu-na-url
 </pre>
 
 *Códigos HTTP de retorno*
