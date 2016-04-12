@@ -30,13 +30,28 @@ curl -X GET -d [https://api.pagosim.com.br/v1/payers/codigo-que-voce-recebeu-na-
 <pre>
 <b>Conteúdo da resposta que devolvemos na requisição (quando o código HTTP de resposta for 200)</b>
 {
-    "utm_uiid": "número de identificação interno - o mesmo código que iremos mandar para você na URL",
-    "name": "Nome da pessoa",
-    "document":"CPF da pessoa,
-    "mail":"e-mail confirmado da pessoa",
-    "phone":"telefone celular confirmado da pessoa -> +5511977668899",
-    "mother":"Nome da mãe da pessoa",
-    "birthday":"data de nascimento da pessoa -> 27/02/1980"
+    {
+        "personalInfo":
+            {
+                "document":"22366661878",
+                "email":"darth.vader@darksideforce.com",
+                "name":"Darth Vader",
+                "phone":"+55116669996660",
+                "birthday":null, /* formato da data QUANDO estiver presente: 27/02/1980" */
+                "mothersName":null
+            },
+        "locationInfo":
+            {
+                "state":"SP" /* UF brasileira*/
+            },
+        "loanInfo":
+            {
+                "ProductName":"Empréstimo consignado", /* Produto escolhido pelo usuário */
+                "isDebtor":true, /* Indica se a pessoa tem algum tipo de restrição financeira */
+                "BankAccount":"Itaú", /* Nome do banco que a pessoa possue conta corrente */
+                "IncomeClass":"Até R$ 2.500,00" /* Classe social da pessoa */
+            }
+    }
 }
 </pre>
 
@@ -82,12 +97,15 @@ curl -X GET -d [https://api.pagosim.com.br/v1/debtors/document/cpf-do-lead]
 <pre>
 <b>Conteúdo da resposta que devolvemos na requisição (quando o código HTTP de resposta for 200)</b>
 {
-    "name": "Nome da pessoa",
-    "document":"CPF da pessoa,
-    "mail":"e-mail confirmado da pessoa",
-    "phone":"telefone celular confirmado da pessoa -> +5511977668899",
-    "mother":"Nome da mãe da pessoa",
-    "birthday":"data de nascimento da pessoa -> 27/02/1980"
+    "personalInfo":
+        {
+            "name": "Nome da pessoa",
+            "document":"CPF da pessoa,
+            "mail":"e-mail confirmado da pessoa",
+            "phone":"telefone celular confirmado da pessoa -> +5511977668899",
+            "mother":"Nome da mãe da pessoa",
+            "birthday":"data de nascimento da pessoa -> 27/02/1980"
+        }
 }
 </pre>
 
