@@ -54,10 +54,12 @@ curl -X GET -d https://api.pagosim.com.br/v2/prospects/codigo-utm_uuid_que-voce-
 }
 </pre>
 
-Exemplo de UTM_UUID para testes
+UUID para você testar: 254faa4b-6f9f-4230-b8c0-5aef2ba2b328
 
-[254faa4b-6f9f-4230-b8c0-5aef2ba2b328](https://api.pagosim.com.br/v2/prospects/254faa4b-6f9f-4230-b8c0-5aef2ba2b328)
-
+*Esse código estará presente na URL toda vez que o lead for direcionado para o seu site. Exemplo:*
+<pre>
+https://www.seusite.com.br?utm_uuid=254faa4b-6f9f-4230-b8c0-5aef2ba2b328
+</pre>
 
 Verificando leads para cobrança
 ====
