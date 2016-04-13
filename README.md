@@ -32,11 +32,11 @@ curl -X GET -d https://api.pagosim.com.br/v2/prospects/codigo-utm_uuid_que-voce-
     {
         "personalInfo":
             {
-                "document":"14334758045",
+                "document":"14334758045", /* CPF do lead */
                 "email":"darth.vader@darksideforce.com",
                 "name":"Darth Vader",
                 "phone":"+55116669996660",
-                "birthday":null, /* formato da data QUANDO estiver presente: 27/02/1980" */
+                "birthday":null, /* formato da data QUANDO estiver presente: 27/02/1980 */
                 "mothersName":null
             },
         "locationInfo":
