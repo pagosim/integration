@@ -9,7 +9,7 @@ Informações gerais
 * Todos os dados trafegádos estarão no formato [JSON](http://www.json.org/).
 
 
-Verificando leads para crédito
+Leads para crédito
 ====
 
 Acesse o seguinte serviço para obter os dados de um lead para crédito
@@ -61,7 +61,7 @@ UUID para você testar: 254faa4b-6f9f-4230-b8c0-5aef2ba2b328
 https://www.seusite.com.br?utm_uuid=254faa4b-6f9f-4230-b8c0-5aef2ba2b328
 </pre>
 
-Verificando leads para cobrança
+Leads para cobrança
 ====
 
 Acesse o seguinte serviço para obter o CPF de um lead para cobrança
