@@ -37,11 +37,13 @@ curl -X GET -d https://api.pagosim.com.br/v2/prospects/codigo-utm_uuid_que-voce-
                 "name":"Darth Vader",
                 "phone":"+55116669996660",
                 "birthday":null, /* formato da data QUANDO estiver presente: 27/02/1980 */
-                "mothersName":null
+                "mothersName":null,
+                "gender":male|female
             },
         "locationInfo":
             {
-                "state":"SP" /* UF brasileira*/
+                "state":"SP", /* Estado (UF)*/
+                "city":"São Paulo" /* Cidade*/
             },
         "loanInfo":
             {
