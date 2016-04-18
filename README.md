@@ -49,7 +49,7 @@ curl -X GET -d https://api.pagosim.com.br/v2/prospects/codigo-utm_uuid_que-voce-
             {
                 "product":"Cartão de crédito", /* Produto escolhido pelo usuário */
                 "personType":"payer|debtor", /* payer = pessoa sem negativação; debtor=pessoa com negativação */
-                "BankAccount":"Itaú", /* Nome do banco que a pessoa possue conta corrente */
+                "bank":"Itaú", /* Nome do banco que a pessoa possue conta corrente */
                 "incomeClass":"Até R$ 2.500,00|" /* Faixa de renda informada */,
                 "loanValue":"R$ 500,00" /* Valor pretendido pela pessoa */
             }
