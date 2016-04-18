@@ -36,9 +36,9 @@ curl -X GET -d https://api.pagosim.com.br/v2/prospects/codigo-utm_uuid_que-voce-
                 "email":"darth.vader@darksideforce.com",
                 "name":"Darth Vader",
                 "phone":"+55116669996660",
-                "birthday":null, /* formato da data QUANDO estiver presente: 27/02/1980 */
-                "mothersName":null,
-                "gender":male|female
+                "birthday":27/02/1980, /* pode ser nulo */
+                "mothersName":Shmi Skywalker /* pode ser nulo */,
+                "gender":male|female /* pode ser nulo */
             },
         "locationInfo":
             {
@@ -107,12 +107,13 @@ curl -X GET --user seu-usuario-pagosim:sua-senha-pagosim -d https://api.pagosim.
 {
     "personalInfo":
         {
-            "name": "Nome da pessoa",
-            "document":"CPF da pessoa,
-            "mail":"e-mail confirmado da pessoa",
-            "phone":"telefone celular confirmado da pessoa -> +5511977668899",
-            "mother":"Nome da mãe da pessoa",
-            "birthday":"data de nascimento da pessoa -> 27/02/1980"
+            "document":"14334758045", /* CPF do lead */
+            "email":"darth.vader@darksideforce.com",
+            "name":"Darth Vader",
+            "phone":"+55116669996660",
+            "birthday":27/02/1980, /* pode ser nulo */
+            "mothersName":Shmi Skywalker /* pode ser nulo */,
+            "gender":male|female /* pode ser nulo */
         }
 }
 </pre>
