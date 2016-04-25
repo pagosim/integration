@@ -116,11 +116,11 @@ curl -X GET --user seu-usuario-pagosim:sua-senha-pagosim -d https://api.pagosim.
             "mothersName":Shmi Skywalker /* pode ser nulo */,
             "gender":male|female /* pode ser nulo */
         }
-     "locationInfo":
-            {
-                "state":"SP", /* Estado (UF) */
-                "city":"São Paulo" /* Cidade */
-            },
+    "locationInfo":
+        {
+            "state":"SP", /* Estado (UF) */
+            "city":"São Paulo" /* Cidade */
+        },
     "dealInfo":
         {
             "payValue":"Quanto o usuário tem disponível para fazer o acordo"
