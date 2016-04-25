@@ -47,11 +47,11 @@ curl -X GET -d https://api.pagosim.com.br/v2/prospects/codigo-utm_uuid_que-voce-
             },
         "loanInfo":
             {
-                "product":"Produto escolhido pelo usuário", 
-                "personType":"payer|debtor", /* payer = pessoa sem negativação; debtor=pessoa com negativação */
-                "bank":"Nome do banco que a pessoa possue conta corrente",
-                "incomeClass":"Faixa de renda informada pelo usuário",
-                "loanValue":"Valor pretendido pela usuário"
+                "product":"Cartão de crédito" /*Produto escolhido pelo usuário*/, 
+                "personType":"payer|debtor" /*payer = pessoa sem negativação; debtor=pessoa com negativação */,
+                "bank":"Itaú" /*Nome do banco que a pessoa possue conta corrente*/,
+                "incomeValue":"Até R$ 2.500,00" /*Faixa de renda informada*/,
+                "loanAmount":"R$ 5.000,00" /*Valor de empréstimo pretendido pela pessoa*/
             }
     }
 }
