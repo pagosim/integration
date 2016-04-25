@@ -116,6 +116,16 @@ curl -X GET --user seu-usuario-pagosim:sua-senha-pagosim -d https://api.pagosim.
             "mothersName":Shmi Skywalker /* pode ser nulo */,
             "gender":male|female /* pode ser nulo */
         }
+     "locationInfo":
+            {
+                "state":"SP", /* Estado (UF) */
+                "city":"São Paulo" /* Cidade */
+            },
+    "dealInfo":
+        {
+            "payValue":"R$ 300,00", /* Valor de possível pagamento informado pelo usuário */
+            "payWhen":"nos próximos dias|mês que vem|daqui há 3 meses", /* Quando o usuário está disposto a fazer o pagamento */
+        }
 }
 </pre>
 
