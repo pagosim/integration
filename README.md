@@ -47,11 +47,11 @@ curl -X GET -d https://api.pagosim.com.br/v2/prospects/codigo-utm_uuid_que-voce-
             },
         "loanInfo":
             {
-                "product":"Cartão de crédito", /* Produto escolhido pelo usuário */
+                "product":"Produto escolhido pelo usuário", 
                 "personType":"payer|debtor", /* payer = pessoa sem negativação; debtor=pessoa com negativação */
-                "bank":"Itaú", /* Nome do banco que a pessoa possue conta corrente */
-                "incomeClass":"Até R$ 2.500,00|" /* Faixa de renda informada */,
-                "loanValue":"R$ 500,00" /* Valor pretendido pela pessoa */
+                "bank":"Nome do banco que a pessoa possue conta corrente",
+                "incomeClass":"Faixa de renda informada pelo usuário",
+                "loanValue":"Valor pretendido pela usuário"
             }
     }
 }
@@ -123,8 +123,8 @@ curl -X GET --user seu-usuario-pagosim:sua-senha-pagosim -d https://api.pagosim.
             },
     "dealInfo":
         {
-            "payValue":"R$ 300,00", /* Valor de possível pagamento informado pelo usuário */
-            "payWhen":"nos próximos dias|mês que vem|daqui há 3 meses", /* Quando o usuário está disposto a fazer o pagamento */
+            "payValue":"Quanto o usuário tem disponível para fazer o acordo"
+            "payWhen": "Quando o usuário está disposto a fazer o pagamento"
         }
 }
 </pre>
