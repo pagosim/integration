@@ -80,7 +80,7 @@ curl --data "cpf=12233322211" http://api.suaempresa.com.br
 Para cada CPF (ou até mesmo para outros) acesse o seguinte serviço para obter as informações cadastrais de um lead para cobrança
 
 <pre>
-curl -X GET --user seu-usuario-pagosim:sua-senha-pagosim -d https://api.pagosim.com.br/v1/debtors/document/cpf-do-lead
+curl -X GET --user seu-usuario-pagosim:sua-senha-pagosim -d https://api.pagosim.com.br/v2/debtors/document/cpf-do-lead
 </pre>
 
 *Abaixo estão listados os códigos HTTP de retorno que iremos tratar.*
