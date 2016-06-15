@@ -67,7 +67,7 @@ https://www.seusite.com.br?utm_uuid=254faa4b-6f9f-4230-b8c0-5aef2ba2b328
 
 Leads para cobrança
 ====
-Nossa plataforma fornece para as empresas alguns endpoints para que elas possam buscar informações atualizadas sobre nossos usuários que possue alguma dívida.
+Nossa plataforma fornece para as empresas alguns endpoints para que elas possam buscar informações atualizadas sobre nossos usuários que possuem alguma dívida.
 
 O primeiro passo para que a integração entre o PagoSim e a empresa aconteça, é que o PagoSim possa registrar em algum endpoint da empresa o CPF do nosso usuário. Por padrão, iremos fazer uma requisição POST da seguinte forma:
 
