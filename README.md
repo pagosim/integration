@@ -11,7 +11,7 @@ Informações gerais
 
 Leads para crédito
 ====
-Quando identificamos que uma pessoa não possui nenhum tipo de débito atrasado, oferecemos a ela a oportunidade de conhecer algum parceiro que oferece crédito online. Para facilitar o processo de onboarding do usuário, oferecemos alguns endpoints com o objetivo de elimitar passos no preenchimento de uma proposta.
+Quando identificamos que uma pessoa não possui nenhum tipo de débito atrasado, oferecemos a ela a oportunidade de conhecer algum parceiro que oferece crédito online. Para facilitar o processo de onboarding do usuário, oferecemos alguns endpoints com o objetivo de eliminar passos no preenchimento de uma proposta.
 
 Acesse o seguinte serviço para obter os dados de um lead para crédito
 
