@@ -1,6 +1,6 @@
 PagoSim<br>Geração de leads para crédito e cobrança
 ====
-Somos uma consultoria financeira gratuita para as pessoas e que tem como modelo de negócio a geração de leads qualificados para os setores de crédito e cobrança.
+Ajuda pessoas endividadas a localizar suas dívidas e estimamos um valor justo para seus débitos, factível para os credores, em cima da qual podem se organizar financeiramente. Entrega leads qualificados para empresas interessadas na negociação de dívidas, de pessoas que há muito tempo vêm sendo procuradas, sem sucesso, por seus credores.
 
 Informações gerais
 ===
