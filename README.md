@@ -67,30 +67,17 @@ https://www.seusite.com.br?utm_uuid=254faa4b-6f9f-4230-b8c0-5aef2ba2b328
 
 Leads para cobrança
 ====
+Nossa plataforma fornece para as empresas alguns endpoints para que elas possam buscar informações atualizadas sobre nossos usuários que possue alguma dívida.
 
-Acesse o seguinte serviço para obter o CPF de um lead para cobrança
-
-<pre>
-curl -X GET -d https://api.pagosim.com.br/v1/debtors/codigo-lead-pagosim
-</pre>
-
-*Abaixo estão listados os códigos HTTP de retorno que iremos tratar.*
-
-| HTTP code |                   Descrição                                   |
-|-----------|---------------------------------------------------------------|
-| 403       |                   Acesso negado.                              |
-| 404       |                   Lead não encontrado.                        |
-| 200       |                   Lead encontrado.                            |
+O primeiro passo para que a integração entre o PagoSim e a empresa aconteça, é que o PagoSim possa registrar em algum endpoint da empresa o CPF do nosso usuário. Por padrão, iremos fazer uma requisição POST da seguinte forma:
 
 <pre>
-<b>Conteúdo da resposta que devolvemos na requisição (quando o código HTTP de resposta for 200)</b>
-{
-    "utm_uiid": "número de identificação interno - o mesmo código que iremos mandar para você na URL",
-    "document":"CPF da pessoa"
-}
+curl --data "cpf=12233322211" http://api.suaempresa.com.br
 </pre>
 
-Acesse o seguinte serviço para obter as informações cadastrais de um lead para cobrança
+*Recomendamos que você coloque os CPFs recebidos em uma sistema de fila*
+
+Para cada CPF (ou até mesmo para outros) acesse o seguinte serviço para obter as informações cadastrais de um lead para cobrança
 
 <pre>
 curl -X GET --user seu-usuario-pagosim:sua-senha-pagosim -d https://api.pagosim.com.br/v1/debtors/document/cpf-do-lead
@@ -119,13 +106,13 @@ curl -X GET --user seu-usuario-pagosim:sua-senha-pagosim -d https://api.pagosim.
         }
     "locationInfo":
         {
-            "state":"SP", /* Estado (UF) */
-            "city":"São Paulo" /* Cidade */
+            "state":"SP", /* Estado (UF) - pode ser nulo */
+            "city":"São Paulo" /* Cidade - pode ser nulo */
         },
     "dealInfo":
         {
-            "payValue":"Quanto o usuário tem disponível para fazer o acordo"
-            "payWhen": "Quando o usuário está disposto a fazer o pagamento"
+            "payValue":"Quanto o usuário tem disponível para fazer o acordo - pode ser nulo"
+            "payWhen": "Quando o usuário está disposto a fazer o pagamento - pode ser nulo"
         }
 }
 </pre>
