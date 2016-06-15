@@ -11,6 +11,7 @@ Informações gerais
 
 Leads para crédito
 ====
+Quando identificamos que uma pessoa não possui nenhum tipo de débito atrasado, oferecemos a ela a oportunidade de conhecer algum parceiro que oferece crédito online. Para facilitar o processo de onboarding do usuário, oferecemos alguns endpoints com o objetivo de elimitar passos no preenchimento de uma proposta.
 
 Acesse o seguinte serviço para obter os dados de um lead para crédito
 
@@ -59,7 +60,7 @@ curl -X GET -d https://api.pagosim.com.br/v2/prospects/codigo-utm_uuid_que-voce-
 
 UUID para você testar: 254faa4b-6f9f-4230-b8c0-5aef2ba2b328
 
-*Esse código estará presente na URL toda vez que o lead for direcionado para o seu site. Exemplo:*
+*Esse código estará presente toda vez que o lead for direcionado para o seu site. Exemplo:*
 <pre>
 https://www.seusite.com.br?utm_uuid=254faa4b-6f9f-4230-b8c0-5aef2ba2b328
 </pre>
