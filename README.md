@@ -80,7 +80,7 @@ curl --data "cpf=12233322211" http://api.suaempresa.com.br
 Para cada CPF (ou até mesmo para outros) acesse o seguinte serviço para obter as informações cadastrais de um lead para cobrança
 
 <pre>
-curl -X GET --user seu-usuario-pagosim:sua-senha-pagosim -d https://api.pagosim.com.br/v2/debtors/document/cpf-do-lead
+curl -X GET -d https://api.pagosim.com.br/v2/collectors/{sua-key}/debtors/cpf-do-lead
 </pre>
 
 *Abaixo estão listados os códigos HTTP de retorno que iremos tratar.*
@@ -94,26 +94,13 @@ curl -X GET --user seu-usuario-pagosim:sua-senha-pagosim -d https://api.pagosim.
 <pre>
 <b>Conteúdo da resposta que devolvemos na requisição (quando o código HTTP de resposta for 200)</b>
 {
-    "personalInfo":
-        {
-            "document":"14334758045", /* CPF do lead */
-            "email":"darth.vader@darksideforce.com",
-            "name":"Darth Vader",
-            "phone":"+55116669996660",
-            "birthday":27/02/1980, /* pode ser nulo */
-            "mothersName":Shmi Skywalker /* pode ser nulo */,
-            "gender":male|female /* pode ser nulo */
-        }
-    "locationInfo":
-        {
-            "state":"SP", /* Estado (UF) - pode ser nulo */
-            "city":"São Paulo" /* Cidade - pode ser nulo */
-        },
-    "dealInfo":
-        {
-            "payValue":"Quanto o usuário tem disponível para fazer o acordo - pode ser nulo"
-            "payWhen": "Quando o usuário está disposto a fazer o pagamento - pode ser nulo"
-        }
+    "document":"14334758045", /* CPF do lead */
+    "email":"darth.vader@darksideforce.com",
+    "name":"Darth Vader",
+    "phone":"+55116669996660",
+    "totalDebts":3 "total de débitos encontrados pelo PagoSim",
+    "totalCurrentValue":500.34 "valor total das dívidas não atualizado",
+    "totalFutureValue":805.76 "valor total das dívidas estimado pelo PagoSim"
 }
 </pre>
 
