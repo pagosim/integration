@@ -99,8 +99,8 @@ curl -X GET -d https://api.pagosim.com.br/v2/collectors/{sua-key}/debtors/cpf-do
     "name":"Darth Vader",
     "phone":"+55116669996660",
     "totalDebts":3 "total de débitos encontrados pelo PagoSim",
-    "totalCurrentValue":500.34 "valor total das dívidas não atualizado",
-    "totalFutureValue":805.76 "valor total das dívidas estimado pelo PagoSim"
+    "totalCurrentValue":500.34 "valor total de todas as dívidas encontradas",
+    "totalFutureValue":1205.76 "valor total estimado de todas as dívidas encontradas"
 }
 </pre>
 
